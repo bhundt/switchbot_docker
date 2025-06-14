@@ -10,5 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy source code
 COPY src/ ./src/
 
-# Set the default command to run your script (update main.py as needed)
-CMD ["python", "src/main.py"]
+# Entrypoint into the application
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
