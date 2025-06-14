@@ -8,6 +8,9 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     bluez \
     libbluetooth-dev \
+    dbus \
+    libdbus-1-dev \
+    python3-dbus \
     && rm -rf /var/lib/apt/lists/*
 
 # Install dependencies
